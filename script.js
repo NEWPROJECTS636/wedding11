@@ -27,11 +27,10 @@ document.addEventListener('DOMContentLoaded', () => {
 
     const petalInterval = setInterval(() => {
         createPetal();
-        createPetal();
-        if (Math.random() > 0.5) createPetal();
-    }, 300);
+        if (Math.random() > 0.65) createPetal();
+    }, 1100);
 
-    for (let i = 0; i < 40; i++) createPetal();
+    for (let i = 0; i < 18; i++) createPetal();
 
     // ===========================
     // CINEMATIC ENVELOPE OPEN
@@ -42,6 +41,7 @@ document.addEventListener('DOMContentLoaded', () => {
     const mainSite = document.getElementById('main-site');
     const whiteFlash = document.getElementById('white-flash');
     const particlesContainer = document.getElementById('particles-container');
+    const bgVideo = document.getElementById('bg-video');
 
     let isOpening = false;
 
@@ -54,7 +54,7 @@ document.addEventListener('DOMContentLoaded', () => {
 
         const colors = ['#d63031', '#a21a20', '#5d0f12', '#d4af37', '#f1cf72'];
 
-        for (let i = 0; i < 30; i++) {
+        for (let i = 0; i < 18; i++) {
             const particle = document.createElement('div');
             particle.classList.add('particle');
 
@@ -93,6 +93,10 @@ document.addEventListener('DOMContentLoaded', () => {
             label.style.opacity = '0';
         }
 
+        envelopeScreen.classList.add('is-opening');
+        clearInterval(petalInterval);
+        if (bgVideo) bgVideo.pause();
+
         // Timeline:
         // 0ms      — Seal breaks with particles
         // 400ms    — Camera zooms in subtly
@@ -105,29 +109,28 @@ document.addEventListener('DOMContentLoaded', () => {
         setTimeout(() => {
             spawnSealParticles();
             envelopeOuter.classList.add('phase-seal');
-        }, 300);
+        }, 180);
 
         // Step 2: Subtle zoom (400ms)
         setTimeout(() => {
             envelopeScreen.classList.add('phase-zoom');
-        }, 700);
+        }, 600);
 
         // Step 3: Open flap (800ms)
         setTimeout(() => {
             envelopeOuter.classList.add('phase-flap');
-        }, 1200);
+        }, 1000);
 
         // Step 4: Letter rises (2200ms)
         setTimeout(() => {
             envelopeOuter.classList.add('phase-letter');
-        }, 2800);
+        }, 2350);
 
         // Step 5: White flash (3800ms)
         setTimeout(() => {
             whiteFlash.style.transition = 'opacity 1.2s ease';
             whiteFlash.style.opacity = '1';
-            clearInterval(petalInterval);
-        }, 4500);
+        }, 3950);
 
         // Step 6: Show website (5000ms)
         setTimeout(() => {
@@ -140,7 +143,7 @@ document.addEventListener('DOMContentLoaded', () => {
                 startCountdown();
             });
             setTimeout(initScratchCard, 600);
-        }, 5800);
+        }, 5100);
     }
 
     openBtn.addEventListener('click', cinematicOpen);

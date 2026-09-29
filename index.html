@@ -6,46 +6,54 @@
     <title>Mohammed Tauhied & Neha Khanum — Wedding</title>
     <meta name="description" content="You are cordially invited to the Nikah and Walima ceremony of Mohammed Tauhied & Neha Khanum.">
     <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Alex+Brush&family=Pinyon+Script&family=Dancing+Script:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Alex+Brush&family=Pinyon+Script&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
 </head>
 <body>
 
     <!-- ============ FULLSCREEN ENVELOPE SCREEN ============ -->
     <div id="envelope-screen">
-        <!-- Floating petals -->
+        <!-- Background video -->
+        <div class="video-bg">
+            <video autoplay muted loop playsinline preload="metadata" id="bg-video" aria-hidden="true">
+                <source src="https://videos.pexels.com/video-files/3723387/3723387-uhd_2560_1440_30fps.mp4" type="video/mp4">
+            </video>
+            <div class="video-overlay"></div>
+        </div>
+
+        <!-- Petals -->
         <div class="petals-container" id="petals-container"></div>
 
-        <!-- Romantic lighting orbs -->
+        <!-- Romantic lighting -->
         <div class="romantic-lights">
             <div class="light-orb orb-1"></div>
             <div class="light-orb orb-2"></div>
             <div class="light-orb orb-3"></div>
-            <div class="light-orb orb-4"></div>
-            <div class="light-orb orb-5"></div>
         </div>
 
-        <!-- Particle burst container (for seal break) -->
+        <!-- Particle burst container -->
         <div class="particles-container" id="particles-container"></div>
 
-        <!-- White flash overlay -->
+        <!-- White flash -->
         <div class="white-flash" id="white-flash"></div>
 
         <div class="envelope-center" id="envelope-center">
             <p class="envelope-label">You've received a special invitation</p>
 
             <div class="envelope-outer" id="envelope-outer">
-                <!-- Shadow underneath -->
-                <div class="envelope-shadow" id="envelope-shadow"></div>
+                <div class="envelope-shadow"></div>
 
-                <div class="envelope" id="envelope">
-                    <!-- Back panel -->
+                <div class="envelope">
                     <div class="env-back">
-                        <div class="env-back-texture"></div>
+                        <div class="env-monogram" aria-hidden="true"><span>M</span><i>&amp;</i><span>N</span></div>
+                        <div class="env-back-lines" aria-hidden="true"></div>
                     </div>
+                    <img class="envelope-reference" src="envelope-reference.jpg" alt="Burgundy lace wedding envelope with a wax seal">
 
-                    <!-- Letter inside -->
                     <div class="env-letter" id="env-letter">
                         <div class="env-letter-inner">
+                            <span class="env-letter-kicker">The beginning of forever</span>
                             <span class="env-letter-bismillah">﷽</span>
                             <div class="env-letter-divider"></div>
                             <span class="env-letter-names">Mohammed & Neha</span>
@@ -53,32 +61,26 @@
                         </div>
                     </div>
 
-                    <!-- Side folds -->
                     <div class="env-fold-left"></div>
                     <div class="env-fold-right"></div>
-
-                    <!-- Bottom fold -->
                     <div class="env-fold-bottom"></div>
 
-                    <!-- Top flap -->
                     <div class="env-flap" id="env-flap">
                         <div class="env-flap-inner"></div>
-                        <div class="env-flap-liner"></div>
                     </div>
+                    <div class="env-edge" aria-hidden="true"></div>
                 </div>
 
-                <!-- Wax seal -->
                 <div class="wax-seal" id="wax-seal">
                     <div class="wax-seal-inner">
-                        <span>M <small>&</small> N</span>
+                        <span>M<small>&</small>N</span>
                     </div>
-                    <div class="wax-seal-ring"></div>
                 </div>
             </div>
 
             <button class="open-btn" id="open-btn">
-                <span class="open-btn-text">Open Invitation</span>
-                <svg class="open-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+                <span>Open Invitation</span>
+                <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
             </button>
         </div>
     </div>
@@ -86,9 +88,13 @@
     <!-- ============ MAIN WEBSITE ============ -->
     <main id="main-site" class="hidden">
 
-        <!-- SECTION 1: Hero / Bismillah -->
+        <!-- Hero -->
         <section class="section hero-section" id="hero">
             <div class="hero-overlay"></div>
+            <!-- Hero background video -->
+            <video class="hero-video" autoplay muted loop playsinline preload="metadata" aria-hidden="true">
+                <source src="https://videos.pexels.com/video-files/4691292/4691292-uhd_2560_1440_25fps.mp4" type="video/mp4">
+            </video>
             <div class="hero-content reveal">
                 <p class="bismillah" lang="ar" dir="rtl">بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ</p>
                 <p class="bismillah-translation">In the name of Allah, the Most Gracious, the Most Merciful</p>
@@ -101,9 +107,8 @@
             </div>
         </section>
 
-        <!-- SECTION 2: Couple Names -->
+        <!-- Names -->
         <section class="section names-section" id="names">
-            <div class="names-bg-pattern"></div>
             <div class="names-content reveal">
                 <h1 class="groom-name">Mohammed Tauhied</h1>
                 <div class="ampersand-wrap">
@@ -116,7 +121,7 @@
             </div>
         </section>
 
-        <!-- SECTION 3: Countdown Timer -->
+        <!-- Countdown -->
         <section class="section countdown-section" id="countdown">
             <div class="countdown-overlay"></div>
             <div class="countdown-wrapper reveal">
@@ -127,17 +132,17 @@
                         <div class="countdown-number" id="cd-days">000</div>
                         <div class="countdown-label">Days</div>
                     </div>
-                    <div class="countdown-separator">:</div>
+                    <div class="countdown-sep">:</div>
                     <div class="countdown-item">
                         <div class="countdown-number" id="cd-hours">00</div>
                         <div class="countdown-label">Hours</div>
                     </div>
-                    <div class="countdown-separator">:</div>
+                    <div class="countdown-sep">:</div>
                     <div class="countdown-item">
                         <div class="countdown-number" id="cd-minutes">00</div>
                         <div class="countdown-label">Minutes</div>
                     </div>
-                    <div class="countdown-separator">:</div>
+                    <div class="countdown-sep">:</div>
                     <div class="countdown-item">
                         <div class="countdown-number" id="cd-seconds">00</div>
                         <div class="countdown-label">Seconds</div>
@@ -147,14 +152,13 @@
             </div>
         </section>
 
-        <!-- SECTION 4: Scratch Card / Save the Date -->
+        <!-- Scratch Card -->
         <section class="section scratch-section" id="save-the-date">
-            <div class="scratch-bg"></div>
             <div class="scratch-wrapper reveal">
                 <h2 class="section-title">Save the Date</h2>
                 <p class="scratch-instruction">Scratch the golden card below to reveal the dates</p>
                 <div class="scratch-card" id="scratch-card">
-                    <div class="scratch-content" id="scratch-content">
+                    <div class="scratch-content">
                         <div class="date-reveal">
                             <div class="date-item">
                                 <span class="date-label">Nikah</span>
@@ -174,68 +178,36 @@
             </div>
         </section>
 
-        <!-- SECTION 5: Events / Venues -->
+        <!-- Events -->
         <section class="section events-section" id="events">
             <div class="events-content">
                 <h2 class="section-title reveal">Ceremonies</h2>
-
                 <div class="events-grid">
-                    <!-- Nikah Card -->
-                    <div class="event-card reveal" id="nikah-card">
-                        <div class="event-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                        </div>
+                    <div class="event-card reveal">
+                        <div class="event-icon">✦</div>
                         <h3 class="event-name">Nikah</h3>
                         <div class="event-date-badge">22 March 2027</div>
                         <div class="event-info">
-                            <div class="event-row">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                                <span>11:30 AM</span>
-                            </div>
-                            <div class="event-row">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                                <div>
-                                    <strong>Savanoor Plaza</strong><br>
-                                    <span class="event-addr">P.B. Road, Davanagere</span>
-                                </div>
-                            </div>
+                            <div class="event-row"><span class="event-icon-sm">🕐</span><span>11:30 AM</span></div>
+                            <div class="event-row"><span class="event-icon-sm">📍</span><div><strong>Savanoor Plaza</strong><br><span class="event-addr">P.B. Road, Davanagere</span></div></div>
                         </div>
-                        <a href="https://maps.google.com/?q=Savanoor+Plaza,+P.B.+Road,+Davanagere" target="_blank" class="map-btn">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            Open in Google Maps
-                        </a>
+                        <a href="https://maps.google.com/?q=Savanoor+Plaza,+P.B.+Road,+Davanagere" target="_blank" class="map-btn">📍 Open in Google Maps</a>
                     </div>
-
-                    <!-- Valima Card -->
-                    <div class="event-card reveal" id="valima-card">
-                        <div class="event-icon">
-                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
-                        </div>
+                    <div class="event-card reveal">
+                        <div class="event-icon">✦</div>
                         <h3 class="event-name">Valima</h3>
                         <div class="event-date-badge">23 March 2027</div>
                         <div class="event-info">
-                            <div class="event-row">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
-                                <span>7:30 PM</span>
-                            </div>
-                            <div class="event-row">
-                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                                <div>
-                                    <strong>Golden Palace</strong><br>
-                                    <span class="event-addr">Budihal Road Circle, Davanagere</span>
-                                </div>
-                            </div>
+                            <div class="event-row"><span class="event-icon-sm">🕐</span><span>7:30 PM</span></div>
+                            <div class="event-row"><span class="event-icon-sm">📍</span><div><strong>Golden Palace</strong><br><span class="event-addr">Budihal Road Circle, Davanagere</span></div></div>
                         </div>
-                        <a href="https://maps.google.com/?q=Golden+Palace,+Budihal+Road+Circle,+Davanagere" target="_blank" class="map-btn">
-                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
-                            Open in Google Maps
-                        </a>
+                        <a href="https://maps.google.com/?q=Golden+Palace,+Budihal+Road+Circle,+Davanagere" target="_blank" class="map-btn">📍 Open in Google Maps</a>
                     </div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 6: Heartfelt Message -->
+        <!-- Message -->
         <section class="section message-section" id="message">
             <div class="message-content reveal">
                 <div class="message-border">
@@ -244,19 +216,19 @@
             </div>
         </section>
 
-        <!-- SECTION 7: Family Invitation -->
+        <!-- Family -->
         <section class="section family-section" id="family">
             <div class="family-content reveal">
                 <div class="family-card">
-                    <div class="family-decor top-decor">❀</div>
+                    <div class="family-decor">❀</div>
                     <h3 class="kids-names">Zunaira & Aaira</h3>
                     <p class="family-msg">invite you to join us in<br>celebrating our beloved<br>mamu's wedding</p>
-                    <div class="family-decor bottom-decor">❀</div>
+                    <div class="family-decor">❀</div>
                 </div>
             </div>
         </section>
 
-        <!-- SECTION 8: Footer -->
+        <!-- Footer -->
         <footer class="section footer-section" id="footer">
             <div class="footer-content reveal">
                 <p class="footer-names">Mohammed Tauhied & Neha Khanum</p>
@@ -265,7 +237,6 @@
                 <p class="footer-made">Made with love</p>
             </div>
         </footer>
-
     </main>
 
     <script src="script.js"></script>
