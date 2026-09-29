@@ -1,0 +1,273 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Mohammed Tauhied & Neha Khanum — Wedding</title>
+    <meta name="description" content="You are cordially invited to the Nikah and Walima ceremony of Mohammed Tauhied & Neha Khanum.">
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Great+Vibes&family=Alex+Brush&family=Pinyon+Script&family=Dancing+Script:wght@400;500;600;700&family=Playfair+Display:ital,wght@0,400;0,500;0,600;0,700;1,400&family=Cinzel:wght@400;500;600;700&family=Inter:wght@300;400;500;600&family=Amiri:wght@400;700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+    <!-- ============ FULLSCREEN ENVELOPE SCREEN ============ -->
+    <div id="envelope-screen">
+        <!-- Floating petals -->
+        <div class="petals-container" id="petals-container"></div>
+
+        <!-- Romantic lighting orbs -->
+        <div class="romantic-lights">
+            <div class="light-orb orb-1"></div>
+            <div class="light-orb orb-2"></div>
+            <div class="light-orb orb-3"></div>
+            <div class="light-orb orb-4"></div>
+            <div class="light-orb orb-5"></div>
+        </div>
+
+        <!-- Particle burst container (for seal break) -->
+        <div class="particles-container" id="particles-container"></div>
+
+        <!-- White flash overlay -->
+        <div class="white-flash" id="white-flash"></div>
+
+        <div class="envelope-center" id="envelope-center">
+            <p class="envelope-label">You've received a special invitation</p>
+
+            <div class="envelope-outer" id="envelope-outer">
+                <!-- Shadow underneath -->
+                <div class="envelope-shadow" id="envelope-shadow"></div>
+
+                <div class="envelope" id="envelope">
+                    <!-- Back panel -->
+                    <div class="env-back">
+                        <div class="env-back-texture"></div>
+                    </div>
+
+                    <!-- Letter inside -->
+                    <div class="env-letter" id="env-letter">
+                        <div class="env-letter-inner">
+                            <span class="env-letter-bismillah">﷽</span>
+                            <div class="env-letter-divider"></div>
+                            <span class="env-letter-names">Mohammed & Neha</span>
+                            <span class="env-letter-date">22 March 2027</span>
+                        </div>
+                    </div>
+
+                    <!-- Side folds -->
+                    <div class="env-fold-left"></div>
+                    <div class="env-fold-right"></div>
+
+                    <!-- Bottom fold -->
+                    <div class="env-fold-bottom"></div>
+
+                    <!-- Top flap -->
+                    <div class="env-flap" id="env-flap">
+                        <div class="env-flap-inner"></div>
+                        <div class="env-flap-liner"></div>
+                    </div>
+                </div>
+
+                <!-- Wax seal -->
+                <div class="wax-seal" id="wax-seal">
+                    <div class="wax-seal-inner">
+                        <span>M <small>&</small> N</span>
+                    </div>
+                    <div class="wax-seal-ring"></div>
+                </div>
+            </div>
+
+            <button class="open-btn" id="open-btn">
+                <span class="open-btn-text">Open Invitation</span>
+                <svg class="open-btn-icon" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 00-2-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/></svg>
+            </button>
+        </div>
+    </div>
+
+    <!-- ============ MAIN WEBSITE ============ -->
+    <main id="main-site" class="hidden">
+
+        <!-- SECTION 1: Hero / Bismillah -->
+        <section class="section hero-section" id="hero">
+            <div class="hero-overlay"></div>
+            <div class="hero-content reveal">
+                <p class="bismillah" lang="ar" dir="rtl">بِسْمِ ٱللَّهِ ٱلرَّحْمَـٰنِ ٱلرَّحِيمِ</p>
+                <p class="bismillah-translation">In the name of Allah, the Most Gracious, the Most Merciful</p>
+                <div class="hero-divider"></div>
+                <p class="hero-tagline">With the Grace and Blessings of Allah,<br>We Cordially Invite You to the Nikah & Walima Ceremony of</p>
+            </div>
+            <div class="scroll-indicator">
+                <span>Scroll Down</span>
+                <div class="scroll-arrow"></div>
+            </div>
+        </section>
+
+        <!-- SECTION 2: Couple Names -->
+        <section class="section names-section" id="names">
+            <div class="names-bg-pattern"></div>
+            <div class="names-content reveal">
+                <h1 class="groom-name">Mohammed Tauhied</h1>
+                <div class="ampersand-wrap">
+                    <div class="amp-line"></div>
+                    <span class="ampersand">&</span>
+                    <div class="amp-line"></div>
+                </div>
+                <h1 class="bride-name">Neha Khanum</h1>
+                <p class="blessing-text">Your presence and blessings will make this occasion even more special</p>
+            </div>
+        </section>
+
+        <!-- SECTION 3: Countdown Timer -->
+        <section class="section countdown-section" id="countdown">
+            <div class="countdown-overlay"></div>
+            <div class="countdown-wrapper reveal">
+                <h2 class="section-title countdown-title">Counting Down To</h2>
+                <p class="countdown-event-name">The Wedding Day</p>
+                <div class="countdown-grid" id="countdown-grid">
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="cd-days">000</div>
+                        <div class="countdown-label">Days</div>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="cd-hours">00</div>
+                        <div class="countdown-label">Hours</div>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="cd-minutes">00</div>
+                        <div class="countdown-label">Minutes</div>
+                    </div>
+                    <div class="countdown-separator">:</div>
+                    <div class="countdown-item">
+                        <div class="countdown-number" id="cd-seconds">00</div>
+                        <div class="countdown-label">Seconds</div>
+                    </div>
+                </div>
+                <p class="countdown-date-text">22 March 2027 — Nikah Ceremony</p>
+            </div>
+        </section>
+
+        <!-- SECTION 4: Scratch Card / Save the Date -->
+        <section class="section scratch-section" id="save-the-date">
+            <div class="scratch-bg"></div>
+            <div class="scratch-wrapper reveal">
+                <h2 class="section-title">Save the Date</h2>
+                <p class="scratch-instruction">Scratch the golden card below to reveal the dates</p>
+                <div class="scratch-card" id="scratch-card">
+                    <div class="scratch-content" id="scratch-content">
+                        <div class="date-reveal">
+                            <div class="date-item">
+                                <span class="date-label">Nikah</span>
+                                <span class="date-day">22</span>
+                                <span class="date-month">March 2027</span>
+                            </div>
+                            <div class="date-divider-v"></div>
+                            <div class="date-item">
+                                <span class="date-label">Valima</span>
+                                <span class="date-day">23</span>
+                                <span class="date-month">March 2027</span>
+                            </div>
+                        </div>
+                    </div>
+                    <canvas id="scratch-canvas"></canvas>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 5: Events / Venues -->
+        <section class="section events-section" id="events">
+            <div class="events-content">
+                <h2 class="section-title reveal">Ceremonies</h2>
+
+                <div class="events-grid">
+                    <!-- Nikah Card -->
+                    <div class="event-card reveal" id="nikah-card">
+                        <div class="event-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <h3 class="event-name">Nikah</h3>
+                        <div class="event-date-badge">22 March 2027</div>
+                        <div class="event-info">
+                            <div class="event-row">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                <span>11:30 AM</span>
+                            </div>
+                            <div class="event-row">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                <div>
+                                    <strong>Savanoor Plaza</strong><br>
+                                    <span class="event-addr">P.B. Road, Davanagere</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://maps.google.com/?q=Savanoor+Plaza,+P.B.+Road,+Davanagere" target="_blank" class="map-btn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Open in Google Maps
+                        </a>
+                    </div>
+
+                    <!-- Valima Card -->
+                    <div class="event-card reveal" id="valima-card">
+                        <div class="event-icon">
+                            <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5"><path d="M12 2L2 7l10 5 10-5-10-5zM2 17l10 5 10-5M2 12l10 5 10-5"/></svg>
+                        </div>
+                        <h3 class="event-name">Valima</h3>
+                        <div class="event-date-badge">23 March 2027</div>
+                        <div class="event-info">
+                            <div class="event-row">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><circle cx="12" cy="12" r="10"/><polyline points="12 6 12 12 16 14"/></svg>
+                                <span>7:30 PM</span>
+                            </div>
+                            <div class="event-row">
+                                <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                                <div>
+                                    <strong>Golden Palace</strong><br>
+                                    <span class="event-addr">Budihal Road Circle, Davanagere</span>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="https://maps.google.com/?q=Golden+Palace,+Budihal+Road+Circle,+Davanagere" target="_blank" class="map-btn">
+                            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M21 10c0 7-9 13-9 13s-9-6-9-13a9 9 0 0118 0z"/><circle cx="12" cy="10" r="3"/></svg>
+                            Open in Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 6: Heartfelt Message -->
+        <section class="section message-section" id="message">
+            <div class="message-content reveal">
+                <div class="message-border">
+                    <p class="message-dua">Kindly Grace the Occasion with<br>Your Presence and Duas</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 7: Family Invitation -->
+        <section class="section family-section" id="family">
+            <div class="family-content reveal">
+                <div class="family-card">
+                    <div class="family-decor top-decor">❀</div>
+                    <h3 class="kids-names">Zunaira & Aaira</h3>
+                    <p class="family-msg">invite you to join us in<br>celebrating our beloved<br>mamu's wedding</p>
+                    <div class="family-decor bottom-decor">❀</div>
+                </div>
+            </div>
+        </section>
+
+        <!-- SECTION 8: Footer -->
+        <footer class="section footer-section" id="footer">
+            <div class="footer-content reveal">
+                <p class="footer-names">Mohammed Tauhied & Neha Khanum</p>
+                <p class="footer-date">22 – 23 March 2027 &bull; Davanagere</p>
+                <div class="footer-hearts">❤ ❤ ❤</div>
+                <p class="footer-made">Made with love</p>
+            </div>
+        </footer>
+
+    </main>
+
+    <script src="script.js"></script>
+</body>
+</html>
